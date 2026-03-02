@@ -2,7 +2,6 @@ import random
 
 
 def generate_numbers_file(filename='numbers.txt', count=50):
-    """Генерирует файл с натуральными числами"""
     with open(filename, 'w', encoding='utf-8') as f:
         numbers = [str(random.randint(1, 100)) for _ in range(count)]
         f.write(' '.join(numbers))
@@ -10,7 +9,6 @@ def generate_numbers_file(filename='numbers.txt', count=50):
 
 
 def find_odd_squares(filename='numbers.txt'):
-    """Находит квадраты нечетных чисел"""
     with open(filename, 'r', encoding='utf-8') as f:
         numbers = list(map(int, f.read().split()))
 
